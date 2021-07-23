@@ -10,6 +10,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { NgbdCarouselBasicComponent } from './components/ngbd-carousel-basic/ngbd-carousel-basic.component';
+import { ContenidoComponent } from './components/contenido/contenido.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NgbdCarouselBasicComponent } from './components/ngbd-carousel-basic/ngb
     InformacionComponent,
     LugaresComponent,
     PerfilComponent,
-    NgbdCarouselBasicComponent
+    NgbdCarouselBasicComponent,
+    ContenidoComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

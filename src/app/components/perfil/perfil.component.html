@@ -1,2 +1,77 @@
 <app-header></app-header>
-<p>perfil works!</p>
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <!-- <a href="#" class="img-responsive"><i class="far fa-user-circle"></i></a> -->
+                    <img src="/img/user_Icon.png" class="img-responsive" alt="">
+                </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        Sofia Fajardo
+                    </div>
+                    <div class="profile-usertitle-job">
+                        Motorista
+                    </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <!-- <div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div> -->
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                                <fa-icon [icon]="faMotorcycle"></fa-icon>
+                                <!-- <i class="glyphicon glyphicon-home"></i> -->
+                                Ordenes Disponibles </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <fa-icon [icon]="faUserClock"></fa-icon>
+                                <!-- <i class="glyphicon glyphicon-user"></i> -->
+                                Ordenes Tomadas </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="glyphicon glyphicon-ok"></i>
+                                Ordenes Entregadas </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+                                <!-- <i class="glyphicon glyphicon-flag"></i> -->
+                                Ganancias </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="mapas()">
+                                <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
+                                <!-- <i class="glyphicon glyphicon-flag"></i> -->
+                                Mapa </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <fa-icon [icon]="faTimes"></fa-icon>
+                                <!-- <i class="glyphicon glyphicon-flag"></i> -->
+                                Cerrar sessión </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+            <app-contenido></app-contenido>
+        </div>
+    </div>
+    
+
+   <!-- <center>
+        <strong>@Derechos reservados <a href="http://j.mp/metronictheme" target="_blank">SoMo-PÁ</a></strong>
+    </center>-->
