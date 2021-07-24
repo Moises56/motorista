@@ -1,26 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <img class="navbar-brand" src="../assets/imagen/logomotorista.png" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        <button class="navbar-toggler" type="button" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <fa-icon [icon]="faBars"></fa-icon>
+            <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio
+                    <a class="nav-link" routerLinkActive="active" routerLink="/">Inicio
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                <!-- <ng-container *ngIf="!useClienteService.loggedIng(); else loggedIng"> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Registrate</a>
+                    <a class="nav-link" routerLinkActive="active" routerLink="/signup">Registrate</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" routerLinkActive="active" routerLink="/signin">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca</a>
+                    <a class="nav-link" href="#acerca">Acerca</a>
                 </li>
+            <!-- </ng-container> -->
+
+            <!-- <ng-template #loggedIng>
+                <li class="nav-item">
+                  <a class="nav-link btnLogout" routerLinkActive="active" routerLink="/perfil" >My Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btnLogout" (click)="useClienteService.logout()">Cerrar</a>
+                </li>
+              </ng-template> -->
+             
+
+
             </ul>
         </div>
     </div>

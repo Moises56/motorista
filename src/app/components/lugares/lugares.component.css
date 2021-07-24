@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "titulos";
+    src: url("/src/assets/fonts/Courgette/Courgette-Regular.ttf");
+
+  } 
+
+  body {
+    font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  }
+
+  h1{
+    font-family: "titulos";
+  }
+  
+  .card-title{
+    font-family: "titulos";
+  }

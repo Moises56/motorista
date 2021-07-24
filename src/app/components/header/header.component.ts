@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { UseClienteService } from '../../services/use-cliente.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public isCollapsed = false;
+  faBars = faBars;
 
-  constructor() { }
+  constructor(public useClienteService: UseClienteService) { }
 
   ngOnInit(): void {
   }

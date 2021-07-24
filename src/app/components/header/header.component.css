@@ -1,8 +1,32 @@
+
+@font-face {
+    font-family: "titulos";
+    src: url("/src/assets/fonts/Courgette/Courgette-Regular.ttf");
+
+  } 
+  
+  body {
+    font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  }
+
 .bg-light {
-    background-color: black !important ;
-    
+    background-color: black !important;  
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: white!important;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgb(243 235 235 / 50%);
+    border-color: rgb(240 229 229 / 90%);
+}
+
+
+.picsum-img-wrapper[_ngcontent-qnv-c108] {
+    margin: 0px 0px -370px -1px !important;
+}
+
+.nav-link{
+    font-family: 'titulos';
 }

@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+  font-family: "titulos";
+  src: url("assets/fonts/Courgette/Courgette-Regular.ttf");
+
+} 
+
+
 .btn-registro{
     background-color: #fec246;
 }

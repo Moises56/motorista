@@ -1,9 +1,206 @@
+@font-face {
+  font-family: "titulos";
+  src: url("/assets/fonts/Courgette/Courgette-Regular.ttf");
+
+} 
+
+
+body {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+
+
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: black;;
+  background-image: url("/src/assets/carrousel/1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: 'titulos' }
+header.masthead .masthead-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: 'titulos'  
+}
+
+/* @media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+} */
+
 .carousel-item {
     height: 100vh;
     min-height: 350px;
     background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
   }
+
+  .picsum-img-wrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .img-carrousel{
+     background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+  }
+
+  .carrousel-style{
+    background-color: black;
+    /* height: 111vh; */
+    background-color:#0000008a;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+   padding: 14%;
+  }
+
+  .text-carrousel{
+    transform: translateY(-130%);
+    font-family: 'titulos';
+}
+
+h3{
+  font-size: 3.75rem;
+  margin-top: -20%;
+}
+
+p{
+  font-size: large;
+}
+
+button{
+  width: 15%; 
+  padding: 10px;
+  background: #EB0808;
+  border-radius: 0.5rem;
+  font-size: 24px;
+}
+
+@media (max-width: 375px){
+  .img-carrousel{
+    background-color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
+   max-width: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   margin: 0;
+ }
+
+  .picsum-img-wrapper {
+    width: 100%;
+    /* margin: 23px auto;
+    padding: 0;
+    padding-top: 18%; */
+}
+
+  .text-carrousel{
+    transform: translateY(4%);
+    font-size: 0.5em
+  }
+
+  h3{
+    font-size:17px;
+    margin-bottom: -3%;
+    font-family: 'titulos';
+  }
+
+  p{
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  button{
+    width: 30%;
+    padding: 3px;
+    background: #EB0808;
+    border-radius: 0.5rem;
+    font-size: 10px;
+  }
+
+  .carrousel-style{
+    background-color: black;
+    background-color: #0000008a;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    /* padding-top: 35%; */
+    width: 100%;
+    transform: translate(-54px, 40px);
+  }
+  
+}
+
+@media (min-width: 768px){
+  .picsum-img-wrapper{
+    width: 100%;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+   
+  }
+
+  .text-carrousel{
+    transform: translateY(4%);
+    font-size: 0.5em;
+    padding-top: 1%;
+  }
+
+  button{
+    width: 17%;
+    padding: 3px;
+    background: #EB0808;
+    border-radius: 0.5rem;
+    font-size: 15px;
+  }
+
+  .carrousel-style{
+    background-color: black;
+    /* height: 111vh; */
+    background-color:#0000008a;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0%;
+   
+  }
+
+  h3{
+    font-size: 1.75rem;
+    margin-top: -20%;
+  }
+
+}
+

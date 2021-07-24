@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -13,6 +15,11 @@ import { NgbdCarouselBasicComponent } from './components/ngbd-carousel-basic/ngb
 import { ContenidoComponent } from './components/contenido/contenido.component';
 import { AuthComponent } from './components/auth/auth.component';
 
+import { AuthGuard } from './auth.guard';
+import { TokenService } from './services/token.service';
+import { SigninComponent } from './components/signin/signin.component';
+import { LandinpageComponent } from './components/landinpage/landinpage.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,15 +29,26 @@ import { AuthComponent } from './components/auth/auth.component';
     PerfilComponent,
     NgbdCarouselBasicComponent,
     ContenidoComponent,
-    AuthComponent
+    AuthComponent,
+    SigninComponent,
+    LandinpageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

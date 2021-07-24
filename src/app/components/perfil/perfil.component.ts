@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faTimes,faMapMarkedAlt, faHandHoldingUsd,faUserClock, faMotorcycle} from '@fortawesome/free-solid-svg-icons';
-
+import { faTimes, faMapMarkedAlt, faHandHoldingUsd, faUserClock, faMotorcycle} from '@fortawesome/free-solid-svg-icons';
+import { UseClienteService } from '../../services/use-cliente.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -8,12 +8,14 @@ import { faTimes,faMapMarkedAlt, faHandHoldingUsd,faUserClock, faMotorcycle} fro
 })
 export class PerfilComponent implements OnInit {
   faMotorcycle = faMotorcycle;
-  faUserClock =faUserClock;
-  faHandHoldingUsd =faHandHoldingUsd;
+  faUserClock = faUserClock;
+  faHandHoldingUsd = faHandHoldingUsd;
   faMapMarkedAlt = faMapMarkedAlt;
-  faTimes =faTimes;
+  faTimes = faTimes;
 
-  constructor() { }
+  constructor(
+    public useClienteService: UseClienteService
+  ) { }
 
   ngOnInit(): void {
   }
