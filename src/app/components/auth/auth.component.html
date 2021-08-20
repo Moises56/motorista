@@ -1,69 +1,103 @@
 <app-header></app-header>
 
-<div class="section pt-5">
-    <div class="container">
-        <div class="row full-height justify-content-center">
-            <div class="col-12 text-center align-selft-center py-5">
-                <div class="section pb-5 pt5 pt-sm-2 text-center">
-                    <h6 class="mb-0 pb-3"><span>Log In</span><span>Sign Up</span></h6>
-                    <input type="checkbox" class="checkbox" id="reg-log" name="reg-log">
-                    <label for="reg-log"></label>
-                    <div class="card-3d-wrap mx-auto">
-                        <div class="card-3d-wrapper">
-                            <div class="card-front">
-                                <div class="center-wrap">
-                                    <div class="section text-center">
-                                        <h4 class="mb-4 pb-3 text-white">Log In</h4>
-                                        <div class="form-group">
-                                            <input type="email" class="form-style" placeholder="Your Email"
-                                                autocomplete="none">
-
+ <div class="container pt-5 auth">
+     <div class="row">
+        <div class="section pt-5 ">
+            <div class="container">
+                <div class="row full-height justify-content-center">
+                    <div class="col-12 text-center align-selft-center py-5">
+                        <div class="section pb-5 pt5 pt-sm-2 text-center">
+                            <h6 class="mb-0 pb-3" ><span id="logi">Login</span><span id="register">Registrate</span></h6>
+                            <input type="checkbox" class="checkbox" id="reg-log" name="reg-log">
+                            <label for="reg-log"></label>
+                            <div class="card-3d-wrap mx-auto">
+                                <div class="card-3d-wrapper">
+                                    <div class="card-front" #logi>
+                                        <div class="center-wrap">
+                                            <div class="section text-center">
+                                                <h4 class="mb-4 pb-3">Login</h4>
+                                                <form [formGroup]='formLoginUsers'>
+                                                    <div class="form-group">
+                                                        <input formControlName="email" name="email" type="email" class="form-style" placeholder="Ingresa tu Email" autocomplete="none">
+                                                        
+                                                            <!-- <button [disabled]="!formLoginUsers.valid">Continuar</button> -->
+                                                    </div>
+                                                    <div class="form-group mt-2">
+                                                        <input formControlName="password" name="password" type="password" class="form-style" placeholder="Ingresa tu Contraseña" autocomplete="none">
+                                                        <i class="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                </form>
+                                                <button href="#" class="btn mt-4" (click)="login()">Login</button>
+                                                <p class="mb-0 mt-4 text-center">
+                                                    <a href="#0" class="link">Olvidaste tu Contraseña?</a>
+                                                </p>
+    
+                                            </div>
                                         </div>
-                                        <div class="form-group mt-2">
-                                            <input type="password" class="form-style" placeholder="Your password"
-                                                autocomplete="none">
-                                            <i class="input-icon uil uil-lock-alt"></i>
+                                    </div>
+    
+                                    <div class="card-back" #register>
+                                        <div class="center-wrap">
+                                            <div class="section text-center">
+                                                <h4 class="mb-1 tiuloRe"> Formulario de Registro</h4>
+                                                <form [formGroup]='formRegistroUsers'>
+                                                    <div class="row">
+                                                        <div class="col-6 colRU">
+                                                            <div class="form-group">
+                                                                <input formControlName="nombre" name="nombre" type="text" class="form-style" placeholder="nombre" autocomplete="none">
+                                                                <i class="input-icon uil uil-user"></i>
+                                                            </div>
+        
+                                                            <div class="form-group  mt-2">
+                                                                <input formControlName="apellido" name="apellido" type="text" class="form-style" placeholder="apellido" autocomplete="none">
+                                                                <!-- <i class="input-icon uil uil-user"></i> -->
+                                                            </div>
+                                                            
+                                                            <div class="form-group mt-2">
+                                                                <input formControlName="email" name="email" type="email" class="form-style" placeholder="email" autocomplete="none">
+                                                            
+                                                            </div>
+                                                            
+                                                            <div class="form-group mt-2">
+                                                                <input formControlName="password" name="password" type="password" class="form-style" placeholder="password" autocomplete="none">
+                                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                            </div>
+                                                            <div class="form-group mt-2">
+                                                                <input formControlName="confir_password" name="confir_password" type="password" class="form-style" placeholder="confir_password" autocomplete="none">
+                                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 ml-auto colRC">
+                                                        <div class="form-group">
+                                                            <h5 class="cadt-title">Registro Vehiculo</h5>
+                                                            <div class="form-group mt-2">
+                                                                <input formControlName="tipo_Vehiculo" name="tipo_Vehiculo" type="text" class="form-style" placeholder="tipo_Vehiculo" autocomplete="none">
+                                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                            </div>
+                                                            <div class="form-group mt-2">
+                                                                <input formControlName="revision_vehiculo" name="revision_vehiculo" type="text" class="form-style" placeholder="revision_vehiculo" autocomplete="none">
+                                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                            </div>
+                                                            <div class="form-group mt-2">
+                                                                <input formControlName="placa_vehiculo" name="placa_vehiculo" type="text" class="form-style" placeholder="placa_vehiculo" autocomplete="none">
+                                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <button href="#" class="btn mt-4" (click)="signup()">Registrate</button>
+                                            </div>
                                         </div>
-                                        <button href="#" class="btn mt-4" (click)="signIn()">Log In</button>
-                                        <p class="mb-0 mt-4 text-center">
-                                            <a href="#0" class="link">Forgot your password?</a>
-                                        </p>
-
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card-back">
-                                <div class="center-wrap">
-                                    <div class="section text-center">
-                                        <h4 class="mb-4 pb-3 text-white">Sign Up</h4>
-                                        <div class="form-group">
-                                            <input type="text" class="form-style" placeholder="Your full name"
-                                                autocomplete="none">
-                                            <i class="input-icon uil uil-user"></i>
-                                        </div>
-
-                                        <div class="form-group mt-2">
-                                            <input type="email" class="form-style" placeholder="Your email"
-                                                autocomplete="none">
-
-                                        </div>
-
-                                        <div class="form-group mt-2">
-                                            <input type="password" class="form-style" placeholder="Your password"
-                                                autocomplete="none">
-                                            <i class="input-icon uil uil-lock-alt"></i>
-                                        </div>
-                                        <button href="#" class="btn mt-4" (click)="signUp()">Signup</button>
-                                    </div>
-                                </div>
-                            </div>
+                       
                         </div>
                     </div>
-
+    
                 </div>
             </div>
-
         </div>
-    </div>
-</div>
+     </div>
+ </div>

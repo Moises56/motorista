@@ -6,13 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import { AppComponent } from './components/app/app.component';
 import { LandinpageComponent } from './components/landinpage/landinpage.component';
 import { AuthComponent } from './components/auth/auth.component';
-import { ContenidoComponent } from './components/contenido/contenido.component';
-import { HeaderComponent } from './components/header/header.component';
-import { InformacionComponent } from './components/informacion/informacion.component';
-import { LugaresComponent } from './components/lugares/lugares.component';
-import { NgbdCarouselBasicComponent } from './components/ngbd-carousel-basic/ngbd-carousel-basic.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
-import { SigninComponent } from './components/signin/signin.component';
 
 import { AuthGuard } from './auth.guard';
 

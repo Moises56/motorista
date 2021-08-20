@@ -1,18 +1,41 @@
-/***
-User Profile Sidebar by @keenthemes
-A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
-Licensed under MIT
+/* * *
+css Perfil Motorista
 ***/
+
+.visible{
+  display: block;
+}
+
+.no-visible{
+  display: none;
+}
+
+
+
+.img-responsive{
+  transform: translateX(100px);
+}
 
 body {
     background: #F1F3FA;
   }
   
+  .perfilUM{
+    margin-top: 35%;
+  }
+
   /* Profile container */
   .profile {
     margin: 20px 0;
   }
+
+  .admin-bar{
+    font-size: 1em;
+  }
   
+  .btnLogot{
+    cursor: pointer;
+  }
   /* Profile sidebar */
   .profile-sidebar {
     padding: 20px 0 10px 0;

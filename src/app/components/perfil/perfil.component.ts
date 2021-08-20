@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faTimes, faMapMarkedAlt, faHandHoldingUsd, faUserClock, faMotorcycle} from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import { UseClienteService } from '../../services/use-cliente.service';
 @Component({
   selector: 'app-perfil',
@@ -7,17 +7,30 @@ import { UseClienteService } from '../../services/use-cliente.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  faMotorcycle = faMotorcycle;
-  faUserClock = faUserClock;
-  faHandHoldingUsd = faHandHoldingUsd;
-  faMapMarkedAlt = faMapMarkedAlt;
-  faTimes = faTimes;
+  faUserCircle = faUserCircle;
+
+  // tslint:disable-next-line:ban-types
+  regionVisible: String = '';
+
+nombreUser: any;
+apellidoUser: any;
 
   constructor(
     public useClienteService: UseClienteService
   ) { }
 
   ngOnInit(): void {
+    this.nombreUser = localStorage.getItem('nombreUser');
+    this.apellidoUser = localStorage.getItem('apellidoUser');
+    console.log(this.nombreUser,
+      this.apellidoUser);
   }
 
+
+
+  // tslint:disable-next-line:typedef
+  getOrdenes(){
+    console.log('ordenes');
+    this.regionVisible = 'orden';
+  }
 }

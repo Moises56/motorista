@@ -13,9 +13,9 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <!-- <ng-container *ngIf="!useClienteService.loggedIng(); else loggedIng"> -->
+                <ng-container *ngIf="!useClienteService.loggedIng(); else loggedIng">
                 <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="/signup">Registrate</a>
+                    <!-- <a class="nav-link" routerLinkActive="active" routerLink="/signup">Registrate</a> -->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active" routerLink="/signin">Login</a>
@@ -23,9 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#acerca">Acerca</a>
                 </li>
-            <!-- </ng-container> -->
+            </ng-container>
 
-            <!-- <ng-template #loggedIng>
+            <ng-template #loggedIng> 
                 <li class="nav-item">
                   <a class="nav-link btnLogout" routerLinkActive="active" routerLink="/perfil" >My Perfil</a>
                 </li>

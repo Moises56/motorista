@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -17,8 +19,9 @@ import { AuthComponent } from './components/auth/auth.component';
 
 import { AuthGuard } from './auth.guard';
 import { TokenService } from './services/token.service';
-import { SigninComponent } from './components/signin/signin.component';
 import { LandinpageComponent } from './components/landinpage/landinpage.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { OrdenesComponent } from './components/ordenes/ordenes.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +33,9 @@ import { LandinpageComponent } from './components/landinpage/landinpage.componen
     NgbdCarouselBasicComponent,
     ContenidoComponent,
     AuthComponent,
-    SigninComponent,
-    LandinpageComponent
+    LandinpageComponent,
+    SidebarComponent,
+    OrdenesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { LandinpageComponent } from './components/landinpage/landinpage.componen
     FontAwesomeModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthGuard,

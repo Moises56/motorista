@@ -1,78 +1,96 @@
 <app-header></app-header>
 
-<div class="container pt-5">
+<div class="container perfilUM">
     <div class="row profile">
-        <div class="col-md-3">
-            <div class="profile-sidebar">
-                <!-- SIDEBAR USERPIC -->
-                <div class="profile-userpic">
-                    <!-- <a href="#" class="img-responsive"><i class="far fa-user-circle"></i></a> -->
-                    <img src="/img/user_Icon.png" class="img-responsive" alt="">
-                </div>
-                <!-- END SIDEBAR USERPIC -->
-                <!-- SIDEBAR USER TITLE -->
-                <div class="profile-usertitle">
-                    <div class="profile-usertitle-name">
-                        Sofia Fajardo
-                    </div>
-                    <div class="profile-usertitle-job">
-                        Motorista
-                    </div>
-                </div>
-                <!-- END SIDEBAR USER TITLE -->
-                <!-- SIDEBAR BUTTONS -->
-                <!-- <div class="profile-userbuttons">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic ">
+                    <!-- <a href="#" class="img-responsive"> <fa-icon [icon]="faUserCircle"></fa-icon></a> -->
+					<img src="/assets/imgMotorista/user_Icon.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{nombreUser}} {{apellidoUser}}
+					</div>
+					<div class="profile-usertitle-job">
+						Motorista
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<!-- <div class="profile-userbuttons">
 					<button type="button" class="btn btn-success btn-sm">Follow</button>
 					<button type="button" class="btn btn-danger btn-sm">Message</button>
 				</div> -->
-                <!-- END SIDEBAR BUTTONS -->
-                <!-- SIDEBAR MENU -->
-                <div class="profile-usermenu">
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="#">
-                                <fa-icon [icon]="faMotorcycle"></fa-icon>
-                                <!-- <i class="glyphicon glyphicon-home"></i> -->
-                                Ordenes Disponibles </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <fa-icon [icon]="faUserClock"></fa-icon>
-                                <!-- <i class="glyphicon glyphicon-user"></i> -->
-                                Ordenes Tomadas </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="glyphicon glyphicon-ok"></i>
-                                Ordenes Entregadas </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <fa-icon [icon]="faHandHoldingUsd"></fa-icon>
-                                <!-- <i class="glyphicon glyphicon-flag"></i> -->
-                                Ganancias </a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="mapas()">
-                                <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
-                                <!-- <i class="glyphicon glyphicon-flag"></i> -->
-                                Mapa </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <fa-icon [icon]="faTimes"></fa-icon>
-                                <!-- <i class="glyphicon glyphicon-flag"></i> -->
-                                Cerrar sessión </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- END MENU -->
-            </div>
-            <app-contenido></app-contenido>
-        </div>
-    </div>
-    
+				<!-- END SIDEBAR BUTTONS -->
 
-   <!-- <center>
-        <strong>@Derechos reservados <a href="http://j.mp/metronictheme" target="_blank">SoMo-PÁ</a></strong>
-    </center>-->
+				<!-- SIDEBAR MENU -->
+			<!-- <app-sidebar></app-sidebar> -->
+			<!--TODO  SIDEBAR MENU -->
+<div class="profile-usermenu">
+    <div class="sidebar-heading border-bottom bg-dark admin-bar">
+        <a class="list-group-item list-group-item-action list-group-item-light p-3">
+            <i class="fas fa-sitemap"></i>
+            <!-- <i class="glyphicon glyphicon-home"></i> -->
+            Home 
+        </a>
+        <a (click)="getOrdenes()" class="list-group-item list-group-item-action list-group-item-light p-3">
+            <i class="fas fa-briefcase"></i>
+            <!-- <i class="glyphicon glyphicon-home"></i> -->
+            Ordenes 
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action list-group-item-light p-3">
+            <i class="fas fa-users"></i>
+            Historial 
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action list-group-item-light p-3">
+            <i class="fab fa-first-order-alt"></i>
+            <!-- <i class="glyphicon glyphicon-flag"></i> -->
+            Ganancias 
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action list-group-item-light p-3">
+            <i class="fas fa-users-cog"></i>
+            <!-- <i class="glyphicon glyphicon-flag"></i> -->
+            Soporte
+        </a>
+
+        <a (click)="useClienteService.logout()" class="btnLogot list-group-item list-group-item-action list-group-item-light p-3">
+            <!-- <i class="fas fa-map-marker-alt"></i> -->
+            <!-- <i class="glyphicon glyphicon-flag"></i> -->
+            <i class="fas fa-sign-out-alt"></i>
+        Cerrar session 
+        </a>
+
+    </div>    
+</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <!-- <div class="profile-content">
+				<div class="container">
+					<div class="row"> -->
+
+						<div [ngClass]="{'visible':regionVisible == 'orden', 'no-visible':regionVisible != 'orden'}">
+							
+							<app-ordenes></app-ordenes>
+
+						</div>
+                <!-- contenidos relacionados... -->
+                
+				<!-- </div>
+			</div>
+		</div> -->
+	</div>
+
+<div class="text-center">
+<strong>@Derechos reservados <a href="http://j.mp/metronictheme" target="_blank">SoMo-PÁ</a></strong>
+</div >
+<br>
+<br>
