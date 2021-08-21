@@ -63,7 +63,10 @@ export class AuthComponent implements OnInit {
           localStorage.setItem('token', res.token ); // * Guardando token en localStorage
           this.router.navigate(['/perfil']);
         },
-        err => console.log(err)
+        err => {
+          console.log(err);
+          alert('***Datos Erroneos');
+        }
         );
     }
 
@@ -83,11 +86,14 @@ export class AuthComponent implements OnInit {
         localStorage.setItem('nombreUser', res.nombreUser ); // * Guardando token en localStorage
         localStorage.setItem('apellidoUser', res.apellidoUser ); // * Guardando token en localStorage
         this.formRegistroUsers.reset();
-        alert('***Estas registrado debes iniciar Session')
+        alert('***Estas registrado Vienenido')
         this.router.navigate(['/perfil']);
         this.accesspointService.onMensajeSuccess.emit(res);
       },
-      err => console.log(err)
+      err => {
+      console.log(err);
+      alert('***Datos Erroneos');
+    }
       );
   }
 }

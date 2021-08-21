@@ -340,3 +340,7 @@ display: block;
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgb(21 21 21 / 20%);
 }
+
+.btnRegister{
+  transform: translate(77px ,-117px);
+}
